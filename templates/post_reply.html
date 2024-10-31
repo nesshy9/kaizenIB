@@ -41,6 +41,8 @@
 	 <a class="post_no" onclick="return document.querySelectorAll('div.banner').length ? highlightReply({{ post.id }}) : true;" href="{{ post.link }}">No.</a>
 	<a class="post_no" onclick="return document.querySelectorAll('div.banner').length ? citeReply({{ post.id }}) : true;" href="{{ post.link('q') }}">
 		{{ post.id }}
+		<a class="fg-button ui-state-default fg-button-icon-left ui-corner-all buttonReply" onclick="citeReply({{ post.id }})" href="{% if isnoko50 %}{{ post.link('q', '50') }}{% else %}{{ post.link('q') }}{% endif %}"> <span class=""></span>[Reply Fast]</a>
+
 	</a>
 	</p>
 	{% if post.embed %}
